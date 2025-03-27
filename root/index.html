@@ -1,24 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="On the Use of Anchoring for Training Vision Models">
+  <meta name="keywords" content="Anchoring, Generalization, DNNs, Calibration, Anomaly Rejection, Model Adaptation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>On the Use of Anchoring for Training Vision Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
 </head>
 <body>
-    <h1>Code and website coming soon!</h1>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="logo">
+            <a href="#">
+              <img src="./assets/logo.webp" alt="Logo" style="width: 150px; height: auto;">
+            </a>
+          </div>
+          <h1 class="title is-1 publication-title">On the Use of Anchoring for Training Vision Models</h1>
+          <h4 class="title is-4 publication-title" style="color: darkblue;">Spotlight @ Neurips 2024, Vancouver, Canada</h4>
+          <div class="is-size-5 publication-authors">
+          <span class="author-block">
+            <a href="https://vivsivaraman.github.io/">Vivek Narayanaswamy</a><sup>1</sup>,
+          </span>
+          <span class="author-block"></span>
+            <a href="https://kowshikthopalli.github.io/">Kowshik Thopalli</a><sup>1</sup>,
+          </span>
+          <span class="author-block"></span>
+            <a href="https://rushila.com/">Rushil Anirudh</a><sup>2</sup>,
+          </span>
+          <span class="author-block"></span>
+            <a href="https://www.linkedin.com/in/yamen-mubarka/">Yamen Mubarka</a><sup>1</sup>,
+          </span>
+          <span class="author-block"></span>
+            <a href="https://www.linkedin.com/in/wesamsakla/">Wesam A. Sakla</a><sup>1</sup>,
+          </span>
+          <span class="author-block">
+            <a href="https://jjthiagarajan.com/">Jay Thiagarajan</a><sup>1</sup>,
+          </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Lawrence Livermore National Laboratory </span>
+            <span class="author-block"><sup>2</sup>Amazon</span>
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.00529"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.00529"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://software.llnl.gov/anchoring"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://neurips.cc/virtual/2024/poster/93049" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Poster Link. -->
+              <span class="link-block">
+                <a href="index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Anchoring is a recent, architecture-agnostic principle for training deep neural networks that has been shown to significantly improve uncertainty estimation, calibration, and extrapolation capabilities. In this paper, we systematically explore anchoring as a general protocol for training vision models, providing fundamental insights into its training and inference processes and their implications for generalization and safety. Despite its promise, we identify a critical problem in anchored training that can lead to an increased risk of learning undesirable shortcuts, thereby limiting its generalization capabilities. To address this, we introduce a new anchored training protocol that employs a simple regularizer to mitigate this issue and significantly enhances generalization. We empirically evaluate our proposed approach across datasets and architectures of varying scales and complexities, demonstrating substantial performance gains in generalization and safety metrics compared to the standard training protocol. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  
+<section class="section" id="intro">
+  <div class="container is-max-desktop content">
+    <h2 class="title">First of all, what is anchoring?</h2>
+    
+    <p class="content has-text-justified"> Anchoring is an architecture-agnostic training technique for deep neural networks. This is based on the principle of stochastic centering, which samples multiple functions using a single model by exploiting the neural tangent kernel's lack of shift invariance. Anchoring reparameterizes each input $\mathrm{x}$ into a tuple comprising a reference sample $\bar{\mathrm{r}}$ and the residual $\mathrm{d} = \mathrm{x}-\bar{\mathrm{r}}$, i.e., $[\bar{\mathrm{r}}, \mathrm{d}]$. The resulting tuple is fed as input to the network instead of the original input, by concatenating the tuple elements along the feature axis for vector-valued data or the channel axis for image data. This forces the neural network to model the joint distribution $P_{(\mathrm{r}, \Delta)}$ for predicting the target $\mathrm{y}$. Formally, the objective can be written as: </p>
+    
+    <img src="./assets/objective.png" alt="Right Justified Image" class="centered-figure" width="60%">
+
+    <p class="content has-text-justified">In effect, for a given \( \mathrm{x} \) and reference samples \( \bar{\mathrm{r}}_1, \dots, \bar{\mathrm{r}}_k \), anchoring ensures that \( \mathcal{F}_\theta([\bar{\mathrm{r}}_1, \mathrm{d}_1]) = \dots =\mathcal{F}_\theta([\bar{\mathrm{r}}_k,\mathrm{d}_k]) \). In other words, regardless of the choice of reference, the model must arrive at the same prediction for an input. </p>
+
+    <h2 class="title">Why should we adopt anchoring?</h2>
+    <p class="content has-text-justified">Anchoring allows the network to learn a mapping between the joint space of (reference, residuals) and the targets, rather than the original input-target pairs. Through this reparameterization, anchoring creates different relative representations for a sample with respect to references drawn from $P_\mathrm{r}$, and attempts to marginalize the effect of the reference when making a prediction for that sample. As a result it implicitly explores wider hypotheses and leads to better generalizable solutions. This principle has been shown to produce models with improved calibration and extrapolation properties, and to facilitate accurate epistemic uncertainty estimation. Basically this behavior hinges on effectively leveraging the <u><b>diversity of the reference-residual pairs</b></u> and stably converging for the same protocols from standard training.</p>
+
+    <p></p>
+    <div class="text-with-image">
+      <div class="text-content">
+          <h2 class="title">Does anchoring actually leverage the reference-residual diversity?</h2>
+          <p class="content has-text-justified">
+              While anchored models operate in the joint space \( P_{(\mathrm{r}, \Delta)} \), the reference set \( \mathcal{R} \) from which the references are sampled from (\( \mathcal{R} \subseteq \mathcal{D} \)), controls the diversity of reference-residual combinations exposed during training. As the size and diversity of \( \mathcal{R} \) increase, anchoring is expected to explore a broader range of hypotheses and lead to improved generalization.
+              <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+              <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+          </p>
+          <p class="content has-text-justified">
+              However, we find that although anchoring offers small but consistent improvements (0.5%-1%) over standard training, its benefits do not fully scale with increased reference set diversity as seen in the figure on the right (generalization on CIFAR10C/100C). This contrasts with prior research advocating for larger reference sets for maximal benefits. Short answer is <u><b>NO!</b></u>
+          </p>
+      </div>
+      
+      <div class="image-content">
+          <img src="./assets/reference_set_size.png" alt="Right Justified Image" class="centered-figure" style="max-width: 80%; height: auto;">
+      </div>
+    </div>
+    
+    <style>
+      .text-with-image {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+      }
+    
+      .text-content {
+          width: 100%; /* Adjust the width of the text content */
+      }
+    
+      .image-content {
+          width: 50%; /* Adjust the width of the image */
+      }
+    
+      .image-content img {
+          display: block;
+          max-width: 60%;
+          height: auto;
+          margin-left: 20px;
+      }
+    </style>
+
+    <h2 class="title">Can changing the anchoring inference protocol result in any difference?</h2>
+    <img src="./assets/inferencing.png" alt="Right Justified Image" class="centered-figure" width="100%">
+    <p</p>
+
+    The literature showcases different protocols for performing inference with anchored models. Strategies such as reference marginalization, as proposed by Thiagarajan et al., utilize multiple references to compute an average prediction and estimate epistemic uncertainty. This process enhances robustness by considering diverse reference-residual combinations. In contrast, Netanyahu et al. introduced the bilinear transduction (BLT) method, which focuses on finding optimal references for extrapolation in regression tasks, especially for unseen data. However, a systematic evaluation of these methods on CIFAR100C shows that while inference protocols vary in complexity, their overall impact on accuracy remains similar. <b>So what is missing?</b> <span style="color: darkgreen; font-weight: bold;">We need to focus on better training anchored models to leverage their properties!</span>
+
+    <p></p>
+
+    <h2 class="title">Anchoring v2.0 - Improving Anchored Training via Reference Masking Regularization</h2>
+    <img src="./assets/block_diagram.png" alt="Right Justified Image" class="centered-figure" width="100%">
+ 
+    <p>A close examination of anchored training reveals a critical limitation. When the reference set, \(\mathcal{R}\), equals the dataset, \(\mathcal{D}\), the number of reference-residual pairs grow combinatorially and becomes impractical to explore fully within a fixed number of training iterations. This results in insufficient sampling of the distribution \(P_{(\mathrm{r},\Delta)}\), which can lead to models making predictions based solely on residuals rather than considering references.</p>
+    
+    <p>To address this, we propose a novel regularization strategy termed <u><b>Reference Masking Regularization</b></u> to improve anchored training. This method involves zeroing out the reference while maintaining the residual fixed, allowing the model to process tuples in a way that discourages meaningful predictions when the reference is masked. It is done so by mapping these masked tuples to high-entropy predictions (uniform probabilities). We control this regularization via a user-defined masking probability ( \alpha ) which is chosen based on the convergence properties of anchored training. Our approach significantly enhances generalization accuracy, particularly with larger reference sets, without compromising inference efficiency, as demonstrated by our experimental results. The figure above depicts the conceptual diagram of our approach along with a simple pseudo-code.</p> 
+
+    
+    <h4 class="title" style="text-align: center; background-color: lightgray; color: darkblue; padding: 5px; border-radius: 5px;">A Deep Dive Into Our Anchored Models Reveals Interesting Properties!</h4>
+    <div class="image-container" style="width: auto; height: 400px; border: 0px solid #ccc; overflow: hidden; position: relative;">
+      <img src="./assets/loss_landscape.png" alt="Image 1" class="active" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 1s ease-in-out;">
+      <img src="./assets/augmentations.png" alt="Image 2" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1s ease-in-out;">
+      <img src="./assets/label_noise.png" alt="Image 3" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 1s ease-in-out;">
+    </div>
+    
+    <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll('.image-container img');
+      const totalImages = images.length;
+    
+      function showNextImage() {
+          images[currentIndex].style.opacity = '0'; // Fade out current image
+          currentIndex = (currentIndex + 1) % totalImages; // Move to the next image
+          images[currentIndex].style.opacity = '1'; // Fade in next image
+      }
+    
+      setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+    
+    <h2 class="title">How well does Anchoring v2.0 work in practice?</h2>
+    <img src="./assets/teaser_res.png" alt="Right Justified Image" class="centered-figure" width="80%">
+
+    
+    <h6 style="color:rgb(49, 30, 255);">We make a number of interesting findings about Anchoring v2.0:</h6>
+
+    <ul>
+      <li><b>How does the generalization, calibration and anomaly rejection properties look like?</b> Across datasets of varying scale (e.g., CIFAR $\rightarrow$ ImageNet) and architectures (e.g., ResNets $\rightarrow$ SWIN), our protocol
+        achieves consistent improvement in performance in all the three fronts. We make an interesting observation that the magnitude of relative increase from the baseline increases with increase in the parameter complexity of the architecture. Anchoring achieves
+        all this without any additional bells and whistles.</li>
+
+      <li><b>Does anchored training compromise performance?</b> No! It is a general
+        protocol applicable to any architecture and typically leads
+        to improved generalization, particularly under distribution
+        shifts. </li>
+
+       <li><b>Do the benefits remain when we adapt anchored models by training linear probes?  </b> Yes! We train linear probes on top of our pre-trained anchored transformers and evaluate them under two scenarios
+      (i) ID Eval: Here, both the training and test datasets originate from the same distribution (e.g., Train and Test on DomainNet Photos) & (ii) OOD Eval: Here, the training and test datasets are distribution shifted (e.g., Train on DomainNet Photos, Test on
+      DomainNet Sketch). In both cases, we observe an average accuracy increase of ~2% indicating the efficacy of our anchored models in being improved feature extractors. </li>
+
+     <li><b>Can anchoring be applied to other modalities?</b> Yes! Anchoring is data and architecture agnostic and can be used to train on graphs, text, audio, time series using a suitable optimization protocol.</li>
+    </ul>
+
+  </div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{narayanaswamy2024use,
+      title={On the Use of Anchoring for Training Vision Models},
+      author={Narayanaswamy, Vivek and Thopalli, Kowshik and Anirudh, Rushil and Mubarka, Yamen and Sakla, Wesam and Thiagarajan, Jayaraman J},
+      journal={Advances in Neural Information Processing Systems},
+      year={2024}
+    }
+  </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template was borrowed from: <a
+              href="https://github.com/nerfies/nerfies.github.io">here</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
